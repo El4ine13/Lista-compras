@@ -1,106 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a0dad, #b28df2); /* Gradiente em roxo */
+    padding: 0;
+    margin: 0;
+    height: 100vh; /* Altura total da tela */
+    display: flex; /* Usar flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
+    max-width: 600px; /* Largura máxima da caixa */
+    width: 100%; /* Faz a caixa ocupar 100% da largura até o máximo */
+    background: white;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1, h2 {
-    color: #333;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow box */
+}
+
+h1, h2 {
+    color: #6a0dad; /* Cor roxa */
+}
+
+.form-add {
     margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 1.2rem;
-    text-align: left;
-    margin-top: 30px;
-  }
-  
-  form.form-add {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
+}
+
+input[type="text"] {
+    width: calc(100% - 100px);
     padding: 10px;
-    width: 80%;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-right: 10px;
-    font-size: 16px;
-  }
-  
-  button {
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: #fff;
+}
+
+button {
+    padding: 10px;
+    background-color: #6a0dad; /* Cor roxa */
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-  ul {
-    list-style-type: none;
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+button:hover {
+    background-color: #4b0082; /* Tom mais escuro de roxo ao passar o mouse */
+}
+
+ul {
+    list-style: none;
     padding: 0;
-  }
-  
-  li {
+}
+
+li {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  button.edit {
-    margin-right: 10px;
-    background-color: #ffc107;
-  }
-  
-  button.edit:hover {
-    background-color: #e0a800;
-  }
-  
-  button.delete {
-    background-color: #dc3545;
-  }
-  
-  button.delete:hover {
-    background-color: #c82333;
-  }
-  
-  .comprado {
-    text-decoration: line-through;
-    color: gray;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    input[type="text"] {
-      width: 70%;
-    }
-  
-    button {
-      padding: 8px 12px;
-    }
-  
-    li {
-      font-size: 14px;
-    }
-  }
-  
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Estilos para os itens comprados */
+.comprado {
+    text-decoration: line-through; /* Risco ao meio */
+    color: lightgray; /* Cor cinza clara */
+}
+
+/* Remove o risco e a cor quando não estiver marcado */
+li input[type="checkbox"]:not(:checked) + span {
+    text-decoration: none; /* Remove o risco */
+    color: black; /* Cor padrão */
+}
+
+button {
+    padding: 10px;
+    background-color: #6a0dad; /* Cor roxa */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+button:hover {
+    background-color: #4b0082; /* Tom mais escuro de roxo ao passar o mouse */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Estilos para os itens comprados */
+.comprado {
+    text-decoration: line-through; /* Risco ao meio */
+    color: lightgray; /* Cor cinza clara */
+}
+
+/* Remove o risco e a cor quando não estiver marcado */
+li input[type="checkbox"]:not(:checked) + span {
+    text-decoration: none; /* Remove o risco */
+    color: black; /* Cor padrão */
+}
